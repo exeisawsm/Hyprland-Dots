@@ -2,11 +2,11 @@
   all: unset;
 }
 
-@import '../../../.config/waybar/wallust/colors-waybar.css';
+@import '../../../.config/waybar/matugen/colors-waybar.css';
 
 /* define some colors */
-@define-color border-color @color12;
-@define-color border-color-alt @color1;
+@define-color border-color @color1;
+@define-color border-color-alt @color18;
 @define-color text-color rgba(255, 255, 255, 0.7);
 @define-color noti-bg rgba(0, 0, 0, 0.4);
 @define-color noti-bg-alt #111111;

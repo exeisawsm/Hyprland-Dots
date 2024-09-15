@@ -1,15 +1,15 @@
 /* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
 /* swaync colors - wallust from waybar.css */
 
-@import '../../.config/waybar/wallust/colors-waybar.css';
+@import '../../.config/waybar/matugen/colors-waybar.css';
 
-@define-color noti-border-color @color12;
+@define-color noti-border-color @color0;
 @define-color noti-bg rgba(0, 0, 0, 0.8);
 @define-color noti-bg-alt #111111;
-@define-color noti-bg-hover @color9;
+@define-color noti-bg-hover @color1;
 @define-color text-color @foreground;
-@define-color text-color-alt @foreground;
-@define-color text-color-disabled rgba(150, 150, 150, 0.8);
+@define-color text-color-alt @color9;
+@define-color text-color-disabled @color18;
 * {
     font-family: "JetBrains Mono Nerd Font";
     font-weight: bold;
@@ -74,7 +74,7 @@
 .notification-default-action:hover,
 .notification-action:hover {
     color: @text-color;
-    background: @color1
+    background: @background
 }
 
 .notification-default-action {

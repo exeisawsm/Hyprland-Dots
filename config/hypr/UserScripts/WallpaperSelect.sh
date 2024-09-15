@@ -70,7 +70,7 @@ main() {
   if [[ "$choice" == "$RANDOM_PIC_NAME" ]]; then
 	swww img -o "$focused_monitor" "$RANDOM_PIC" $SWWW_PARAMS;
     sleep 0.5
-    "$SCRIPTSDIR/WallustSwww.sh"
+    "$SCRIPTSDIR/MatugenSwww.sh"
     sleep 0.2
     "$SCRIPTSDIR/Refresh.sh"
     exit 0
@@ -103,7 +103,7 @@ fi
 main
 
 sleep 0.5
-"$SCRIPTSDIR/WallustSwww.sh"
+"$SCRIPTSDIR/MatugenSwww.sh"
 
 sleep 0.2
 "$SCRIPTSDIR/Refresh.sh"

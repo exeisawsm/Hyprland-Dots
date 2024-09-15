@@ -1,6 +1,6 @@
 #!/bin/bash
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
-# Scripts for refreshing ags waybar, rofi, swaync, wallust
+# Scripts for refreshing ags waybar, rofi, swaync, matugen
 
 SCRIPTSDIR=$HOME/.config/hypr/scripts
 UserScripts=$HOME/.config/hypr/UserScripts

@@ -19,19 +19,19 @@ configuration {
 	dpi:						1;
 }
 
-/* ---- Load wallust colors ---- */
-@theme "~/.config/rofi/wallust/colors-rofi.rasi"
+/* ---- Load matugen colors ---- */
+@theme "~/.config/rofi/matugen/colors-rofi.rasi"
 
 /* ---- Global Properties ---- */
 * {
 
     background-alt:              @selected-active-background; // Buttons background
-    selected:                    @selected-urgent-background; // Button selected
-    active:                      @selected-normal-background; // Window activated
+    selected:                    @active-background; // Button selected
+    active:                      @selected-active-foreground; // Window activated
     urgent:                      @selected; // When hovering the activated window (maybe more?)
 
     text-selected:               @background;
-    text-color:                  @foreground;
+    text-color:                  @active-foreground;
     border-color:                @selected;
 }
 

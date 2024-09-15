@@ -3,6 +3,8 @@
 # For Dark and Light switching
 # Note: Scripts are looking for keywords Light or Dark except for wallpapers as the are in a separate folders
 
+set -x
+
 # Paths
 wallpaper_base_path="$HOME/Pictures/wallpapers/Dynamic-Wallpapers"
 dark_wallpapers="$wallpaper_base_path/Dark"
@@ -12,11 +14,11 @@ swaync_style="$HOME/.config/swaync/style.css"
 ags_style="$HOME/.config/ags/user/style.css"
 SCRIPTSDIR="$HOME/.config/hypr/scripts"
 notif="$HOME/.config/swaync/images/bell.png"
-wallust_rofi="$HOME/.config/wallust/templates/colors-rofi.rasi"
+matugen_rofi="$HOME/.config/matugen/templates/colors-rofi.rasi"
 
 kitty_conf="$HOME/.config/kitty/kitty.conf"
 
-wallust_config="$HOME/.config/wallust/wallust.toml"
+matugen_config="$HOME/.config/matugen/matugen.toml"
 pallete_dark="dark16"
 pallete_light="light16"
 
@@ -51,11 +53,11 @@ notify_user() {
     notify-send -u low -i "$notif" "Switching to $1 mode"
 }
 
-# Use sed to replace the palette setting in the wallust config file
+# Use sed to replace the palette setting in the matugen config file
 if [ "$next_mode" = "Dark" ]; then
-    sed -i 's/^palette = .*/palette = "'"$pallete_dark"'"/' "$wallust_config" 
+    sed -i 's/^palette = .*/palette = "'"$pallete_dark"'"/' "$matugen_config" 
 else
-    sed -i 's/^palette = .*/palette = "'"$pallete_light"'"/' "$wallust_config" 
+    sed -i 's/^palette = .*/palette = "'"$pallete_light"'"/' "$matugen_config" 
 fi
 
 # Function to set Waybar style
@@ -139,12 +141,11 @@ sed -i "s|^color_scheme_path=.*$|color_scheme_path=$qt5ct_color_scheme|" "$HOME/
 sed -i "s|^color_scheme_path=.*$|color_scheme_path=$qt6ct_color_scheme|" "$HOME/.config/qt6ct/qt6ct.conf"
 kvantummanager --set "$kvantum_theme"
 
-
-# set the rofi color for background
+# Set the rofi color for background
 if [ "$next_mode" = "Dark" ]; then
-    sed -i '24s/.*/background: rgba(0,0,0,0.7);/' $wallust_rofi
+    awk '/^background:/ {sub(/background: .*/, "background: rgba(0,0,0,0.7);")} {print}' $matugen_rofi > tmpfile && mv tmpfile $matugen_rofi
 else
-    sed -i '24s/.*/background: rgba(255,255,255,0.9);/' $wallust_rofi
+    awk '/^background:/ {sub(/background: .*/, "background: rgba(255,255,255,0.9);")} {print}' $matugen_rofi > tmpfile && mv tmpfile $matugen_rofi
 fi
 
 
@@ -230,7 +231,7 @@ update_theme_mode
 
 sleep 0.5
 # Run remaining scripts
-${SCRIPTSDIR}/WallustSwww.sh
+${SCRIPTSDIR}/MatugenSwww.sh
 sleep 1
 ${SCRIPTSDIR}/Refresh.sh 
 

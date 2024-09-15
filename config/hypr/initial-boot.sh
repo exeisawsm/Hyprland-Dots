@@ -21,11 +21,11 @@ effect="--transition-bezier .43,1.19,1,.4 --transition-fps 30 --transition-type 
 # Check if a marker file exists.
 if [ ! -f ~/.config/hypr/.initial_startup_done ]; then
     sleep 1
-    # Initialize wallust and wallpaper
+    # Initialize matugen and wallpaper
 	if [ -f "$wallpaper" ]; then
-		wallust run -s $wallpaper > /dev/null 
+		matugen image $wallpaper > /dev/null 
 		swww query || swww-daemon && $swww $wallpaper $effect
-	    "$scriptsDir/WallustSwww.sh" > /dev/null 2>&1 & 
+	    "$scriptsDir/MatugenSwww.sh" > /dev/null 2>&1 & 
 	fi
      
     # initiate GTK dark mode and apply icon and cursor theme

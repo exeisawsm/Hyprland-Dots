@@ -44,10 +44,10 @@ no-effects() {
     # Wait for swww command to complete
     wait $!
     # Run other commands after swww
-    wallust run "$current_wallpaper" -s &
+    matugen image "$current_wallpaper" &
     # Wait to complete
     wait $!
-    # Refresh rofi, waybar, wallust palettes
+    # Refresh rofi, waybar, matugen palettes
     "${SCRIPTSDIR}/Refresh.sh"
     notify-send -u low -i "$iDIR/bell.png" "No wallpaper effects"
     # copying wallpaper for rofi menu
@@ -80,10 +80,10 @@ main() {
             # Wait for swww command to complete
             wait $!
             # Wait for other commands to finish
-            wallust run "$wallpaper_output" -s &
+            matugen image "$wallpaper_output" &
             # Wait for other commands to finish
             wait $!
-            # Refresh rofi, waybar, wallust palettes
+            # Refresh rofi, waybar, matugen palettes
             "${SCRIPTSDIR}/Refresh.sh"
             notify-send -u low -i "$iDIR/bell.png" "$choice effects applied"
         else

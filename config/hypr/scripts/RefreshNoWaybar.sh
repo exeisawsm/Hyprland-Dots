@@ -3,7 +3,7 @@
 
 # Modified version of Refresh but no waybar refresh
 # Used by automatic wallpaper change
-# Modified inorder to refresh rofi background, Wallust, SwayNC
+# Modified inorder to refresh rofi background, Matugen, SwayNC
 
 SCRIPTSDIR=$HOME/.config/hypr/scripts
 UserScripts=$HOME/.config/hypr/UserScripts
@@ -28,8 +28,8 @@ done
 # quit ags
 ags -q
 
-# Wallust refresh
-${SCRIPTSDIR}/WallustSwww.sh &
+# Matugen refresh
+${SCRIPTSDIR}/MatugenSwww.sh &
 
 # Relaunching rainbow borders if the script exists
 sleep 1

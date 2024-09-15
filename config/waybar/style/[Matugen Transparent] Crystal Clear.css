@@ -1,10 +1,10 @@
 /* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
 /* ..........................................*/
-/* ....Wallust Transparent - Crystal Clear........ */
+/* ....matugen Transparent - Crystal Clear........ */
 /* ......................................... */
 /* --- 👍 original designed by https://github.com/Krautt  👍 --- */
 
-@import '../../.config/waybar/wallust/colors-waybar.css';
+@import '../../.config/waybar/matugen/colors-waybar.css';
 
 @define-color critical #ff0000; /* critical color */
 @define-color warning #f3f809;  /* warning color */

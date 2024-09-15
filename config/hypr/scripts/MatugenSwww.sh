@@ -1,6 +1,6 @@
 #!/bin/bash
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
-# Wallust Colors for current wallpaper
+# Matugen Colors for current wallpaper
 
 # Define the path to the swww cache directory
 cache_dir="$HOME/.cache/swww/"
@@ -32,8 +32,6 @@ fi
 
 # Check the flag before executing further commands
 if [ "$ln_success" = true ]; then
-    # execute wallust
-	echo 'about to execute wallust'
-    # execute wallust skipping tty and terminal changes
-    wallust run "$wallpaper_path" -s &
+    # execute matugen
+    matugen image "$wallpaper_path" &
 fi

@@ -224,7 +224,7 @@ echo "You chose $resolution resolution." 2>&1 | tee -a "$LOG"
 if [ "$resolution" == "≤ 1080p" ]; then
   cp -r config/rofi/resolution/1080p/* config/rofi/
   sed -i 's/font_size 16.0/font_size 12.0/' config/kitty/kitty.conf
-  sed -i 's/font_size 16.0/font_size 12.0/' config/wallust/templates/colors-kitty.conf
+  #sed -i 's/font_size 16.0/font_size 12.0/' config/wallust/templates/colors-kitty.conf
 
   # hyprlock matters
   mv config/hypr/hyprlock.conf config/hypr/hyprlock-2k.conf
@@ -341,7 +341,7 @@ get_backup_dirname() {
   echo "back-up_${timestamp}"
 }
 
-for DIR in ags btop cava fastfetch hypr kitty Kvantum nvim qt5ct qt6ct rofi swappy swaync wallust waybar wlogout; do 
+for DIR in ags btop cava fastfetch hypr kitty Kvantum nvim qt5ct qt6ct rofi swappy swaync matugen waybar wlogout; do 
   DIRPATH=~/.config/"$DIR"
   if [ -d "$DIRPATH" ]; then 
     echo -e "${NOTE} - Config for $DIR found, attempting to back up."
@@ -423,8 +423,8 @@ done
 # symlinks for waybar style
 ln -sf "$waybar_style" "$HOME/.config/waybar/style.css" && \
 
-# initialize wallust to avoid config error on hyprland
-wallust run -s $wallpaper 2>&1 | tee -a "$LOG"
+# initialize matugen to avoid config error on hyprland
+matugen image $wallpaper 2>&1 | tee -a "$LOG"
 
 
 printf "\n%.0s" {1..2}

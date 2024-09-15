@@ -1,0 +1,87 @@
+# config_directory/config.toml
+[config]
+reload_apps = false
+set_wallpaper = false
+prefix = '@'
+
+[config.reload_apps_list]
+waybar = false
+kitty = true
+gtk_theme = false
+
+[config.colors_to_harmonize]
+red = "#cc0000"
+orange = "#fe8019"
+yellow = "#c4a000"
+green = "#4e9a06"
+blue = "#729fcf"
+cyan = "#06989a"
+magenta = "#75507b"
+# red = "#f7768e"
+# green = "#9ece6a"
+# yellow = "#e0af68"
+# blue = "#7aa2f7"
+# magenta = "#bb9af7"
+# cyan = "#7dcfff"
+white = "#d3d7cf"
+white2 = "#ffffff"
+# color1 = "#f7768e"
+# color2 = "#9ece6a"
+# color3 = "#e0af68"
+# color4 = "#7aa2f7"
+# color5 = "#bb9af7"
+# color6 = "#7dcfff"
+# color7 = "#a9b1d6"
+# color8 = "#414868"
+# color9 = "#f7768e"
+# color10 = "#9ece6a"
+# color11 = "#e0af68"
+# color12 = "#7aa2f7"
+# color13 = "#bb9af7"
+# color14 = "#7dcfff"
+# color15 = "#c0caf5"
+# color16 = "#ff9e64"
+# color17 = "#db4b4b"
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/matugen/colors-hyprland.conf'
+
+[templates.cava]
+input_path = '~/.config/matugen/templates/colors-cava'
+output_path = '~/.config/cava/config'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/colors-waybar.css'
+output_path = '~/.config/waybar/matugen/colors-waybar.css'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/colors-rofi.rasi'
+output_path = '~/.config/rofi/matugen/colors-rofi.rasi'
+
+colors_to_compare = [
+    { name = "black", color = "#000000" },
+    { name = "red", color = "#ff0000" },
+    { name = "maroon", color = "#800000" },
+    { name = "yellow", color = "#ffff00" },
+    { name = "olive", color = "#808000" },
+    { name = "lime", color = "#00ff00" },
+    { name = "green", color = "#008000" },
+    { name = "aqua", color = "#00ffff" },
+    { name = "teal", color = "#008080" },
+    { name = "blue", color = "#0000ff" },
+    { name = "navy", color = "#000080" },
+    { name = "fuchsia", color = "#ff00ff" },
+    { name = "purple", color = "#800080" },
+]
+compare_to = "{{colors.primary.default.hex}}"
+pre_hook = 'echo "source color {{colors.source_color.default.hex}}, closest color {{closest_color}}"'
+post_hook = 'echo "after gen"'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+
+#[templates.ags]
+#input_path = '~/.config/matugen/templates/ags.scss.template'
+#output_path = '~/.config/matugen/templates/ags.scss'
