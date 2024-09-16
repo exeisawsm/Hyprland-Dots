@@ -29,14 +29,14 @@ tooltip {
     border-radius: 10px;
     border-width: 1px;
     border-style: solid;
-    border-color: @color15;
+    border-color: @color1;
 }
 
 /*-----module groups----*/
 .modules-right {
-	border: 3px solid @color12;
+	border: 3px solid @color1;
 	border-radius: 40px 0px 0px 0px;
-	background-color: @color1;
+	background-color: @color0;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-right: 4px;
@@ -54,9 +54,9 @@ tooltip {
 }
 
 .modules-left {
-	border: 3px solid @color12;
+	border: 3px solid @color1;
 	border-radius: 0px 0px 40px 0px;
-	background-color: @color1;
+	background-color: @color0;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-right: 4px;
@@ -172,7 +172,6 @@ tooltip {
 #custom-hypridle.notactive,
 #idle_inhibitor.activated {
 	color: #39FF14;
-	font-size: 100%;
 }
 
 #taskbar button.active {

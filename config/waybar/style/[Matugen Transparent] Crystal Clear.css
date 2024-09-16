@@ -6,11 +6,11 @@
 
 @import '../../.config/waybar/matugen/colors-waybar.css';
 
-@define-color critical #ff0000; /* critical color */
-@define-color warning #f3f809;  /* warning color */
-@define-color text @color12;  /* text color */
-@define-color text-alt @color9;  /* text alternative color */
-@define-color bg @color7;  /* background color */
+@define-color critical @color26; /* critical color */
+@define-color warning @color18;  /* warning color */
+@define-color text @foreground;  /* text color */
+@define-color text-alt @color10;  /* text alternative color */
+@define-color bg @background;  /* background color */
 
 *{
 	font-family: "JetBrains Mono Nerd Font";
@@ -156,7 +156,6 @@ window#waybar.empty #window {
 #custom-hypridle.notactive,
 #idle_inhibitor.activated {
 	color: #39FF14;
-	font-size: 100%;
 }
 	   
 #battery.critical:not(.charging) {

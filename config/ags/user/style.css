@@ -111,12 +111,12 @@ widget {
 
 .overview-search-result-btn:hover,
 .overview-search-result-btn:focus {
-  background-color: alpha(@color7, 0.9);
+  background-color: alpha(@color25, 0.9);
   color: alpha(@color0, 0.7);
 }
 
 .overview-search-result-btn:active {
-  background-color: alpha(@color7, 0.9);
+  background-color: alpha(@color25, 0.9);
   color: @color4;
 }
 
@@ -127,7 +127,7 @@ widget {
   border-left: 1px solid @border-color-alt;
   border-right: 1px solid @border-color-alt;
   border-bottom: 2px solid @border-color;
-  box-shadow: 0px 2px 3px @color5;
+  box-shadow: 0px 2px 3px @color10;
   margin: 0.476rem;
   padding: 0.341rem;
   /* background-color: rgba(49, 50, 68, 0.8); */
@@ -143,7 +143,7 @@ widget {
   background-image: url('../../rofi/.current_wallpaper');
   background-size: cover;
   background-position: center;
-  border: 0.068rem solid alpha(@color4, 0.5);
+  border: 0.068rem solid alpha(@color1, 0.5);
 }
 
 .overview-tasks-workspace-number {
@@ -159,20 +159,20 @@ widget {
   /* background-color: @color_a3; */
   /* background-color: rgba(46, 40, 50, 0.8); */
   color: #EBDFED;
-  border: 0.068rem solid @color7;
+  border: 0.068rem solid @color6;
 }
 
 .overview-tasks-window:hover,
 .overview-tasks-window:focus {
-  background-color: alpha(@color9, 0.8);
+  background-color: alpha(@color22, 0.8);
 }
 
 .overview-tasks-window:active {
-  background-color: alpha(@color9, 0.8);
+  background-color: alpha(@color22, 0.8);
 }
 
 .overview-tasks-window-selected {
-  background-color: alpha(@color9, 0.8);
+  background-color: alpha(@color22, 0.8);
 }
 
 .overview-tasks-window-dragging {

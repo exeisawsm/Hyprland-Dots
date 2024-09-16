@@ -40,7 +40,7 @@ tooltip {
 	border-radius: 12px;
 	border-width: 2px;
 	border-style: solid;
-	border-color: @color12;
+	border-color: @color1;
 }
 
 tooltip label{
@@ -131,7 +131,7 @@ tooltip label{
 	/* color: #bf616a; */
 	border-radius: 12px;
 	background-color: rgba(50, 50, 50, 0.1);
-	border: 1px solid @color12;
+	border: 1px solid @color1;
 	padding-top: 4px;
 	padding-bottom: 4px;
 	padding-right: 6px;
@@ -316,7 +316,6 @@ label:focus {
 #custom-hypridle.notactive,
 #idle_inhibitor.activated {
 	color: #39FF14;
-	font-size: 100%;
 }
 
 #temperature {
